@@ -18,10 +18,14 @@
 
 .header__decoration {
   position: absolute;
-  top: -50px;
+  top: 0;
   right: 0;
   z-index: -10;
-  width: 100%;
+  width: 150%;
+}
+
+.header__decoration--3 {
+  display: none;
 }
 
 // Меню на моб и планшет
@@ -40,6 +44,7 @@
   align-content: center;
   width: 100%;
   z-index: 20;
+  box-shadow: 0px 0px 18px $black-second;
 }
 
 .header__nav-close {
@@ -48,8 +53,8 @@
 
 .header__button-close {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 8.2%;
+  right: 6.2%;
   background-color: $background;
   width: 45px;
   height: 45px;
@@ -161,12 +166,12 @@
   font-weight: 400;
   font-size: 30px;
   line-height: 100%;
+  padding-right: 10%;
 }
 
 .header__p {
   font-style: normal;
   font-weight: 400;
-  padding-right: 10%;
   font-size: 16px;
   line-height: 120%;
   color: $white;
@@ -199,6 +204,11 @@
   margin-top: 30px;
 }
 
+.header__logo--desktop,
+.header__sellbutton {
+  display: none;
+}
+
 @media (min-width:$tablet-width) {
   .header {
     padding-top: 40px;
@@ -227,10 +237,112 @@
   }
 
   .header__decoration {
-    top: -250px;
+    top: 0;
+    width: 80%;
   }
 
   .header__link {
     font-size: 18px;
+  }
+
+  .header__button-close {
+    top: 16%;
+  }
+}
+@media (min-width:$desktop-width) {
+  .header {
+    padding-top: 47px;
+    padding-bottom: 110px;
+    padding-left: 9.75%;
+    padding-right: 9.75%;
+    background-image: url(../img/bike-for-desktop.png);
+  }
+
+  .header__block {
+    justify-content: flex-start;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__logo--desktop {
+    display: block;
+  }
+
+  .header__nav-close {
+    display: block;
+  }
+
+  .header__sellbutton {
+    display: block;
+    background-color: $white-background;
+    color: $black-second;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    padding-right: 2.85%;
+    padding-left: 2.85%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 65px;
+    margin-left: auto;
+    &:hover {
+      background-color: $orange;
+      color: $white-background;
+      transition: ease-in-out 0.3s;
+    }
+  }
+
+  .header__nav {
+    background: none;
+    position: static;
+    padding: 0;
+    width: 55%;
+    box-shadow: none;
+  }
+
+  .header__link {
+    color: $white-background;
+    font-size: 14px;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .header__button-close,
+  .header__button-open {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 85px;
+    color: $white;
+  }
+
+  .header__p {
+    font-size: 30px;
+    color: $orange;
+    padding-right: 55%;
+  }
+
+  .header__inner {
+    width: 22%;
+  }
+
+  .header__switch {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .header__decoration {
+    width: 50%;
+  }
+
+  .header__decoration--3 {
+    display: block;
+    width: 70%;
   }
 }
