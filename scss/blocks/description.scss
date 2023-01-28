@@ -1,6 +1,5 @@
 .description {
-  padding-left: 6.2%;
-  padding-right: 6.2%;
+  @include paddings-mob-tab;
   padding-top: 40px;
   padding-bottom: 20px;
   position: relative;
@@ -59,6 +58,30 @@
   display: none;
 }
 
+.description__decoration {
+  display: none;
+}
+
+.description__decoration-tablet {
+  display: none;
+}
+
+.description__decoration-circle {
+  position: absolute;
+  top: -380px;
+  left: 0;
+  z-index: -5;
+  width: 100%;
+}
+
+.description__decoration-circle--tab {
+  display: none;
+}
+
+.description__decoration-circle--desk {
+  display: none;
+}
+
 @media (min-width:$tablet-width) {
   .description {
     margin-bottom: 40px;
@@ -81,11 +104,29 @@
   .description__p {
     font-size: 14px;
   }
+
+  .description__decoration-tablet {
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    width: 65%;
+    z-index: -5;
+  }
+
+  .description__decoration-circle--mob {
+    display: none;
+  }
+
+  .description__decoration-circle--tab {
+    display: block;
+  }
 }
+
 @media (min-width:$desktop-width) {
   .description {
     padding-top: 100px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
     @include paddings-desktop;
   }
 
@@ -143,10 +184,32 @@
 
     &:first-child {
       width: 65.57%;
+      z-index: 5;
     }
 
     &:last-child {
       width: 31.07%;
     }
+  }
+
+  .description__decoration {
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    width: 100%;
+  }
+
+  .description__decoration-tablet {
+    display: none;
+  }
+
+  .description__decoration-circle--tab {
+    display: none;
+  }
+
+  .description__decoration-circle--desk {
+    display: block;
+    width: auto;
   }
 }

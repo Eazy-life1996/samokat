@@ -1,8 +1,7 @@
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 6.2%;
-  padding-right: 6.2%;
+  @include paddings-mob-tab;
   position: relative;
   background-image: url(../img/bike.png);
   background-repeat: no-repeat;
