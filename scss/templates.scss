@@ -2,3 +2,8 @@ body {
   background-color: $background;
   font-family: 'Open Sans', sans-serif;
 }
+
+@mixin paddings-desktop {
+  padding-left: 9.75%;
+  padding-right: 9.75%;
+}

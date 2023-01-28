@@ -251,10 +251,9 @@
 }
 @media (min-width:$desktop-width) {
   .header {
+    @include paddings-desktop;
     padding-top: 47px;
     padding-bottom: 110px;
-    padding-left: 9.75%;
-    padding-right: 9.75%;
     background-image: url(../img/bike-for-desktop.png);
   }
 
