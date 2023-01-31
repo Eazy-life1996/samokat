@@ -1,7 +1,7 @@
 .description {
   @include paddings-mob-tab;
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -82,6 +82,10 @@
   display: none;
 }
 
+.description__inner:nth-child(3) {
+  position: relative;
+}
+
 @media (min-width:$tablet-width) {
   .description {
     margin-bottom: 40px;
@@ -120,6 +124,13 @@
 
   .description__decoration-circle--tab {
     display: block;
+  }
+
+  .description__inner:nth-child(3)::before {
+    top: 0;
+    left: -10%;
+    opacity: 0.6;
+    filter: blur(140px);
   }
 }
 
@@ -211,5 +222,12 @@
   .description__decoration-circle--desk {
     display: block;
     width: auto;
+  }
+
+  .description__inner:nth-child(3)::before {
+    top: 200%;
+    left: 10%;
+    opacity: 1;
+    filter: blur(120px);
   }
 }

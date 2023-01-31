@@ -1,0 +1,176 @@
+.design {
+  @include paddings-mob-tab;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.design__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: $white-background;
+  margin-bottom: 20px;
+}
+
+.design__p {
+  color: rgba($white-background, 0.7);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 170%;
+}
+
+.design__subtitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: $white-background;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.design__img {
+  border-radius: 10%;
+  width: 100%;
+}
+
+.design__block {
+  margin-bottom: 25px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.design__img--tab-desktop {
+  display: none;
+}
+
+.design__decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -5;
+}
+
+.design__decoration--desk {
+  display: none;
+}
+
+.design__circle {
+  position: absolute;
+  z-index: -5;
+}
+
+.design__circle--tab,
+.design__circle--desk {
+  display: none;
+}
+
+.design__circle--mob {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media (min-width:$tablet-width) {
+  .design {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .design__title {
+    font-size: 26px;
+    line-height: 110%;
+    margin-bottom: 30px;
+  }
+
+  .design__img {
+    display: none;
+  }
+
+  .design__img--tab-desktop {
+    display: block;
+    border-radius: 5%;
+    width: 100%;
+  }
+
+  .design__p {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  .design__subtitle {
+    font-size: 19px;
+    line-height: 120%;
+  }
+
+  .design__inner {
+    width: 78.5%;
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+  }
+
+  .design__decoration {
+    display: none;
+  }
+
+  .design__circle--tab {
+    display: block;
+    top: 0;
+    right: 0;
+  }
+
+  .design__circle--mob {
+    display: none;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .design {
+    @include paddings-desktop;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .design__block {
+    margin-bottom: 0;
+  }
+
+  .design__inner {
+    left: 7%;
+    bottom: 6%;
+    width: 88%;
+  }
+
+  .design__title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 43px;
+    line-height: 110%;
+    color: $orange;
+    padding-right: 33%;
+    margin-bottom: 60px;
+  }
+
+  .design__decoration--desk {
+    display: block;
+  }
+
+  .design__circle--tab {
+    display: none;
+  }
+
+  .design__circle--desk {
+    display: block;
+    top: 0;
+    right: 0;
+    height: 900px;
+    width: 60%;
+  }
+}
