@@ -7,7 +7,7 @@
 
 .description__title {
   color: $white-background;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 25px;
   line-height: 120%;
   margin-bottom: 25px;
@@ -22,8 +22,8 @@
 }
 
 .description__p {
-  color: $white-background;
-  font-weight: 400;
+  color: rgba($white-background, 0.7);
+  font-weight: 300;
   font-size: 12px;
   line-height: 170%;
 }
@@ -37,7 +37,7 @@
 
 .description__subtitle {
   color: $orange;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 16px;
   line-height: 120%;
   margin-bottom: 30px;
@@ -47,7 +47,7 @@
 .description__subtitle::after {
   content: '';
   width: 35.7%;
-  height: 3px;
+  height: 2px;
   background-color: $orange;
   position: absolute;
   top: 30px;
@@ -175,12 +175,15 @@
     color: $grey;
   }
 
-  .description__subtitle--mouseup,
-  .description__p--mouseup {
+  .description__inner:hover .description__subtitle {
     color: $white-background;
   }
 
-  .description__subtitle--mouseup::after {
+  .description__inner:hover .description__p {
+    color: rgba($white-background, 0.7);
+  }
+
+  .description__inner:hover .description__subtitle::after {
     background-color: $orange;
   }
 
