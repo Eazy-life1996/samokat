@@ -48,6 +48,24 @@
   width: 100%;
 }
 
+.app__circle {
+  position: absolute;
+  z-index: -15;
+}
+
+.app__circle--tab,
+.app__circle--desk,
+.app__circle--desk--2 {
+  display: none;
+}
+
+.app__circle--mob {
+  left: 0;
+  top: 8%;
+  height: 550px;
+  width: 100%;
+}
+
 @media (min-width:$tablet-width) {
   .app {
     display: flex;
@@ -69,8 +87,12 @@
   }
 
   .app__inner {
-    justify-content: space-between;
+    justify-content: start;
     width: 83%;
+  }
+
+  .app__link {
+    margin-right: 15px;
   }
 
   .app__decoration-mob,
@@ -91,13 +113,29 @@
     position: relative;
     z-index: -8;
   }
+
+  .app__circle--mob,
+  .app__circle--desk {
+    display: none;
+  }
+
+  .app__circle--tab {
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media (min-width:$desktop-width) {
   .app {
     @include paddings-desktop;
     padding-top: 80px;
-    width: 90%;
+  }
+
+  .app__block:nth-child(2) {
+    margin-right: 12%;
   }
 
   .app__title {
@@ -115,11 +153,6 @@
   .app__inner {
     width: 46%;
     margin-top: 40px;
-    justify-content: start;
-  }
-
-  .app__link {
-    margin-right: 15px;
   }
 
   .app__phone-desktop {
@@ -140,8 +173,27 @@
   .app__decoration-desk {
     display: block;
     position: absolute;
-    right: -11%;
+    right: 0;
     top: -256px;
     z-index: -5;
+  }
+
+  .app__circle--mob,
+  .app__circle--tab {
+    display: none;
+  }
+
+  .app__circle--desk {
+    display: block;
+    top: -30%;
+    right: 0;
+    height: 100%;
+    width: 70%;
+  }
+
+  .app__circle--desk--2 {
+    display: block;
+    left: 0;
+    bottom: 0;
   }
 }

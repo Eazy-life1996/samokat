@@ -166,6 +166,10 @@
     background-color: $grey;
   }
 
+  .safe__block:nth-child(5) .safe__subtitle::after {
+    width: 100%;
+  }
+
   .safe__title {
     font-weight: 500;
     font-size: 45px;
