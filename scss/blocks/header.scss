@@ -273,23 +273,11 @@
   }
 
   .header__sellbutton {
+    @include button;
     display: block;
-    background-color: $white-background;
-    color: $black-second;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
     padding-right: 2.85%;
     padding-left: 2.85%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 65px;
     margin-left: auto;
-    &:hover {
-      background-color: $orange;
-      color: $white-background;
-      transition: ease-in-out 0.3s;
-    }
   }
 
   .header__nav {
