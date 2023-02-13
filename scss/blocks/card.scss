@@ -2,6 +2,7 @@
   @include paddings-mob-tab;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .card__list {
@@ -32,6 +33,7 @@
   padding-top: 25px;
   padding-bottom: 30px;
   border-radius: 20px;
+  box-shadow: 0 0 60px $black-second;
 }
 
 .card__title {
@@ -111,11 +113,28 @@
   display: none;
 }
 
-@media (min-width:$tablet-width) {
-  .card {
-    padding-bottom: 40px;
-  }
+.card__circle {
+  position: absolute;
+  top: -600px;
+  right: 0;
+  z-index: -2;
+}
 
+.card__decoration-mob {
+  position: absolute;
+  top: -115px;
+  right: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+
+.card__decoration-tab,
+.card__decoration-desk {
+  display: none;
+}
+
+@media (min-width:$tablet-width) {
   .card__list--visible {
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +185,18 @@
     position: absolute;
     right: -7%;
     top: -60px;
+  }
+
+  .card__circle,
+  .card__decoration-mob {
+    display: none;
+  }
+
+  .card__decoration-tab {
+    display: block;
+    position: absolute;
+    top: -240%;
+    right: 0;
   }
 }
 
@@ -229,6 +260,19 @@
   }
 
   .card__item {
+    width: 100%;
+  }
+
+  .card__decoration-tab {
+    display: none;
+  }
+
+  .card__decoration-desk {
+    display: block;
+    position: absolute;
+    top: -26%;
+    right: 0;
+    z-index: -5;
     width: 100%;
   }
 }
