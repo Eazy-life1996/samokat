@@ -66,24 +66,32 @@
   display: none;
 }
 
-.description__decoration-circle {
+.description__inner:nth-child(3) {
+  position: relative;
+}
+
+.description__circle {
   position: absolute;
-  top: -380px;
-  left: 0;
   z-index: -5;
+}
+
+.description__circle--mob {
+  top: -32%;
+  left: 0;
   width: 100%;
 }
 
-.description__decoration-circle--tab {
-  display: none;
+.description__circle--mob-2 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-.description__decoration-circle--desk {
+.description__circle--tab,
+.description__circle--tab-2,
+.description__circle--desk,
+.description__circle--desk-2 {
   display: none;
-}
-
-.description__inner:nth-child(3) {
-  position: relative;
 }
 
 @media (min-width:$tablet-width) {
@@ -118,19 +126,31 @@
     z-index: -5;
   }
 
-  .description__decoration-circle--mob {
-    display: none;
-  }
-
-  .description__decoration-circle--tab {
-    display: block;
-  }
-
   .description__inner:nth-child(3)::before {
     top: 0;
     left: -10%;
     opacity: 0.6;
     filter: blur(140px);
+  }
+
+  .description__circle--mob,
+  .description__circle--mob-2,
+  .description__circle--desk,
+  .description__circle--desk-2 {
+    display: none;
+  }
+
+  .description__circle--tab {
+    display: block;
+    top: -20%;
+    left: 0;
+  }
+
+  .description__circle--tab-2 {
+    display: block;
+    bottom: 4%;
+    left: 0;
+    width: 100%;
   }
 }
 
@@ -218,19 +238,29 @@
     display: none;
   }
 
-  .description__decoration-circle--tab {
-    display: none;
-  }
-
-  .description__decoration-circle--desk {
-    display: block;
-    width: auto;
-  }
-
   .description__inner:nth-child(3)::before {
     top: 200%;
     left: 10%;
     opacity: 1;
     filter: blur(120px);
+  }
+
+  .description__circle--mob,
+  .description__circle--mob-2,
+  .description__circle--tab,
+  .description__circle--tab-2 {
+    display: none;
+  }
+
+  .description__circle--desk {
+    display: block;
+    top: -35%;
+    left: 0;
+  }
+
+  .description__circle--desk-2 {
+    display: block;
+    bottom: -40px;
+    right: 0;
   }
 }

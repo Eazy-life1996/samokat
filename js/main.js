@@ -4,11 +4,11 @@ window.addEventListener('DOMContentLoaded', () => {
         closeBtn = document.querySelector('[data-close-menu]');
 
   openBtn.addEventListener('click', () => {
-    menu.classList.remove('header__nav-close');
+    menu.classList.add('header__nav-close');
   });
 
   closeBtn.addEventListener('click', () => {
-    menu.classList.add('header__nav-close');
+    menu.classList.remove('header__nav-close');
   });
 
   // Открытие списка с карточке
@@ -18,5 +18,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
   buttonForList.addEventListener('click', () => {
     list.classList.toggle('card__list--visible');
-  })
+  });
 });
