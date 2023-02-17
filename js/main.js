@@ -19,4 +19,21 @@ window.addEventListener('DOMContentLoaded', () => {
   buttonForList.addEventListener('click', () => {
     list.classList.toggle('card__list--visible');
   });
+
+  // Подпись к инпуту
+
+  const input = document.querySelector('[data-input]'),
+        label = document.querySelector('[data-label]');
+  
+  input.addEventListener('focus', () => {
+    label.classList.add('modal-review__label-2');
+  });
+
+  input.addEventListener('blur', () => {
+    if (input.value != 0) {
+      label.classList.add('modal-review__label-2');
+    } else {
+      label.classList.remove('modal-review__label-2');
+    }
+  });
 });

@@ -1,0 +1,105 @@
+.modal-review {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+.modal-review__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: $background;
+  width: 90vw;
+  padding: 10% 7%;
+  padding-top: 15%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-review__close {
+  background-color: $grey;
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  width: 20%;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  font-weight: 300;
+  color: $white-background;
+  box-shadow: inset 0 0 10px $background;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.modal-review__title {
+  font-weight: 300;
+  font-size: 23px;
+  color: $orange;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-review__block {
+  position: relative;
+}
+
+.modal-review__name,
+.modal-review__review {
+  width: 100%;
+  padding: 8px 4%;
+  background-color: $grey;
+  background: none;
+  border: 1px solid $orange;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: $orange;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal-review__label {
+  color: $white-background;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  top: 11%;
+  left: 4%;
+  transition: 0.3s
+}
+
+.modal-review__label-2 {
+  background-color: $background;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 5px;
+  font-size: 12px;
+  top: -20%;
+  transition: 0.3s
+}
+
+.modal-review__button {
+  @include button;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+@media (min-width:$tablet-width) {
+  .modal-review__wrapper {
+    width: 70vw;
+    padding: 5%;
+    padding-top: 9%;
+    left: 15%;
+  }
+}

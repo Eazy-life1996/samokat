@@ -421,6 +421,26 @@
       </p>
     </div>
   </footer>
+  <div class="modal-review">
+    <div class="modal-review__wrapper">
+      <button class="modal-review__close">Закрыть</button>
+      <form action="#" method="post" class="modal-review__form">
+        <h2 class="modal-review__title">
+          Оставьте свой отзыв
+        </h2>
+        <div class="modal-review__block">
+          <label for="user-review-name" class="modal-review__label" data-label>
+            Ваше имя
+          </label>
+          <input type="text" class="modal-review__name" name="user-name" id="user-review-name" data-input required>
+        </div>
+        <textarea class="modal-review__review" name="user-review" id="user-review-review" cols="30" rows="10" maxlength="300"></textarea>
+        <button class="modal-review__button" type="submit">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
