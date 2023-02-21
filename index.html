@@ -434,7 +434,12 @@
           </label>
           <input type="text" class="modal-review__name" name="user-name" id="user-review-name" data-input required>
         </div>
-        <textarea class="modal-review__review" name="user-review" id="user-review-review" cols="30" rows="10" maxlength="300"></textarea>
+        <div class="modal-review__block">
+          <label for="user-review-review" class="modal-review__label modal-review__label--2" data-label-2>
+            Ваш отзыв
+          </label>
+          <textarea class="modal-review__review" name="user-review" id="user-review-review" cols="30" rows="10" data-input-2 maxlength="300" required></textarea>
+        </div>
         <button class="modal-review__button" type="submit">
           Отправить
         </button>

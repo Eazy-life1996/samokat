@@ -4,6 +4,7 @@
   width: 100%;
   height: 100%;
   backdrop-filter: blur(5px);
+  z-index: 100;
 }
 
 .modal-review__wrapper {
@@ -12,6 +13,7 @@
   left: 5%;
   transform: translateY(-50%);
   background-color: $background;
+  background: linear-gradient(130deg, rgba(34, 34, 34, 1) 0%, rgba(51, 51, 51, 1) 100%);
   width: 90vw;
   padding: 10% 7%;
   padding-top: 15%;
@@ -56,14 +58,15 @@
   padding: 8px 4%;
   background-color: $grey;
   background: none;
-  border: 1px solid $orange;
+  border: 1px solid $white-background;
   border-radius: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 14px;
   color: $orange;
 
   &:focus {
     outline: none;
+    border-color: $orange;
   }
 }
 
@@ -77,13 +80,27 @@
   transition: 0.3s
 }
 
-.modal-review__label-2 {
+.modal-review__label-focus {
   background-color: $background;
   padding-left: 2%;
   padding-right: 2%;
   border-radius: 5px;
   font-size: 12px;
   top: -20%;
+  transition: 0.3s
+}
+
+.modal-review__label--2 {
+  top: 3.3%
+}
+
+.modal-review__label-focus--2 {
+  background-color: $background;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 5px;
+  font-size: 12px;
+  top: -5%;
   transition: 0.3s
 }
 
@@ -97,9 +114,68 @@
 
 @media (min-width:$tablet-width) {
   .modal-review__wrapper {
-    width: 70vw;
+    width: 60vw;
     padding: 5%;
     padding-top: 9%;
-    left: 15%;
+    left: 0%;
+    margin: 0 auto;
+  }
+
+  .modal-review__title {
+    font-size: 30px;
+  }
+
+  .modal-review__name,
+  .modal-review__review {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .modal-review__wrapper {
+    width: 40vw;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
+    left: 0%;
+    margin: 0 auto;
+  }
+
+  .modal-review__close {
+    right: 12.5%;
+  }
+
+  .modal-review__wrapper {
+    background: linear-gradient(130deg, rgba(34,34,34,1) 31%, rgba(51,51,51,1) 100%);
+  }
+
+  .modal-review__title {
+    font-size: 38px;
+  }
+
+  .modal-review__name,
+  .modal-review__review {
+    font-size: 18px;
+  }
+
+  .modal-review__label {
+    font-size: 18px;
+  }
+
+  .modal-review__label-focus,
+  .modal-review__label-focus--2 {
+    font-size: 14px;
+    top: -4%;
+  }
+
+  .modal-review__label-focus {
+    top: -18%;
+  }
+
+  .modal-review__button {
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto;
   }
 }

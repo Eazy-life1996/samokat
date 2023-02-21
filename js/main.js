@@ -23,17 +23,31 @@ window.addEventListener('DOMContentLoaded', () => {
   // Подпись к инпуту
 
   const input = document.querySelector('[data-input]'),
-        label = document.querySelector('[data-label]');
-  
+    inputSecond = document.querySelector('[data-input-2]'),
+    label = document.querySelector('[data-label]'),
+    labelSecond = document.querySelector('[data-label-2]');
+
   input.addEventListener('focus', () => {
-    label.classList.add('modal-review__label-2');
+    label.classList.add('modal-review__label-focus');
   });
 
   input.addEventListener('blur', () => {
     if (input.value != 0) {
-      label.classList.add('modal-review__label-2');
+      label.classList.add('modal-review__label-focus');
     } else {
-      label.classList.remove('modal-review__label-2');
+      label.classList.remove('modal-review__label-focus');
+    }
+  });
+
+  inputSecond.addEventListener('focus', () => {
+    labelSecond.classList.add('modal-review__label-focus--2');
+  });
+
+  inputSecond.addEventListener('blur', () => {
+    if (inputSecond.value != 0) {
+      labelSecond.classList.add('modal-review__label-focus--2');
+    } else {
+      labelSecond.classList.remove('modal-review__label-focus--2');
     }
   });
 });
