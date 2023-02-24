@@ -29,3 +29,44 @@ body {
     transition: ease-in-out 0.3s;
   }
 }
+
+@mixin modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+@mixin modal-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: $background;
+  background: linear-gradient(130deg, rgba(34, 34, 34, 1) 0%, rgba(51, 51, 51, 1) 100%);
+  width: 90vw;
+  padding: 10% 7%;
+  padding-top: 15%;
+  border-radius: 10px;
+  position: relative;
+
+  @media (min-width:$tablet-width) {
+    width: 60vw;
+    padding: 5%;
+    padding-top: 9%;
+    left: 0%;
+    margin: 0 auto;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 40vw;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
+    left: 0%;
+    margin: 0 auto;
+  }
+}

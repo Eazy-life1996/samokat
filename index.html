@@ -291,7 +291,7 @@
       </div>
       <button class="reviews__arrow reviews__arrow--prev"></button>
       <button class="reviews__arrow reviews__arrow--next"></button>
-      <button class="reviews__button">Оставить отзыв</button>
+      <button class="reviews__button" data-modal-review-open>Оставить отзыв</button>
       <img src="img/svg/rev-decoration-mob.svg" alt="Декор" class="reviews__decoration-mob">
       <img src="img/svg/rev-decoration-desk.svg" alt="Декор" class="reviews__decoration-desk">
       <img src="img/rev-ellipse-mob.png" alt="Декор" class="reviews__circle reviews__circle--mob">
@@ -309,7 +309,7 @@
         <p class="question__p">
           Если у вас есть собственный вопрос - задайте его через форму обратной связи.
         </p>
-        <button class="question__button">
+        <button class="question__button" data-modal-question-open>
           Задать вопрос
         </button>
       </div>
@@ -421,26 +421,57 @@
       </p>
     </div>
   </footer>
-  <div class="modal-review">
-    <div class="modal-review__wrapper">
-      <button class="modal-review__close">Закрыть</button>
-      <form action="#" method="post" class="modal-review__form">
-        <h2 class="modal-review__title">
+  <div class="modal" data-modal-review>
+    <div class="modal__wrapper">
+      <button class="modal__close" data-modal-review-close>Закрыть</button>
+      <form action="#" method="post" class="modal__form">
+        <h2 class="modal__title">
           Оставьте свой отзыв
         </h2>
-        <div class="modal-review__block">
-          <label for="user-review-name" class="modal-review__label" data-label>
+        <div class="modal__block">
+          <label for="user-review-name" class="modal__label" data-label>
             Ваше имя
           </label>
-          <input type="text" class="modal-review__name" name="user-name" id="user-review-name" data-input required>
+          <input type="text" class="modal__name" name="user-name" id="user-review-name" data-input required>
         </div>
-        <div class="modal-review__block">
-          <label for="user-review-review" class="modal-review__label modal-review__label--2" data-label-2>
+        <div class="modal__block">
+          <label for="user-review-review" class="modal__label modal__label--2" data-label-2>
             Ваш отзыв
           </label>
-          <textarea class="modal-review__review" name="user-review" id="user-review-review" cols="30" rows="10" data-input-2 maxlength="300" required></textarea>
+          <textarea class="modal__review" name="user-review" id="user-review-review" cols="30" rows="10" data-input-2 maxlength="300" required></textarea>
         </div>
-        <button class="modal-review__button" type="submit">
+        <button class="modal__button" type="submit">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" data-modal-question>
+    <div class="modal__wrapper">
+      <button class="modal__close" data-modal-question-close>Закрыть</button>
+      <form action="#" method="post" class="modal__form">
+        <h2 class="modal__title">
+          Задайте ваш вопрос
+        </h2>
+        <div class="modal__block">
+          <label for="user-question-name" class="modal__label">
+            Ваше имя
+          </label>
+          <input type="text" class="modal__name" name="user-name" id="user-question-name" required>
+        </div>
+        <div class="modal__block">
+          <label for="user-mail-name" class="modal__label">
+            Ваша почта
+          </label>
+          <input type="email" class="modal__mail" name="user-mail" id="user-mail-name" required>
+        </div>
+        <div class="modal__block">
+          <label for="user-question" class="modal__label">
+            Ваш вопрос
+          </label>
+          <textarea class="modal__text" name="user-question" id="user-question" cols="30" rows="5" maxlength="90" required></textarea>
+        </div>
+        <button class="modal__button" type="submit">
           Отправить
         </button>
       </form>

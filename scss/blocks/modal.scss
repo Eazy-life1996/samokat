@@ -1,0 +1,13 @@
+.modal--second {
+  @include modal;
+  display: none;
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal__wrapper--second {
+  @include modal-wrapper;
+}
+
