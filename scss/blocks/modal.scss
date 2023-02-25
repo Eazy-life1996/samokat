@@ -11,3 +11,18 @@
   @include modal-wrapper;
 }
 
+.modal__label--1 {
+  top: 8px;
+}
+
+.modal__label-focus--1 {
+  background-color: $orange;
+  padding-bottom: 1px;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 5px;
+  font-size: 12px;
+  top: -8px;
+  transition: 0.3s
+}
+

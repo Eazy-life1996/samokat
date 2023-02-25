@@ -1,0 +1,41 @@
+.background-white {
+  background: none;
+  background-color: $white-background;
+}
+
+.body-color {
+  background-color: $body-background;
+}
+
+.text-color--2 {
+  color: $black-second;
+  font-weight: 400;
+
+  @media (min-width:$tablet-width) {
+    color: $white-background;
+  }
+}
+
+.text-color {
+  color: $black-second;
+  font-weight: 400;
+}
+
+.title-color {
+  color: $orange;
+}
+
+.block-btn {
+  border-color: $black-second;
+}
+
+.btn-black {
+  color: $white-background;
+  background-color: $black-second;
+}
+
+.btn-white {
+  background: none;
+  color: $black-second;
+  border-radius: 65px;
+}

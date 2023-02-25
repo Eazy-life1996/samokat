@@ -79,32 +79,65 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Подпись к инпуту
 
-  const input = document.querySelector('[data-input]'),
-    inputSecond = document.querySelector('[data-input-2]'),
-    label = document.querySelector('[data-label]'),
-    labelSecond = document.querySelector('[data-label-2]');
+  const inputQ = document.querySelectorAll('[data-input]'),
+        labelQ = document.querySelectorAll('[data-label]');
 
-  input.addEventListener('focus', () => {
-    label.classList.add('modal__label-focus');
+  inputQ.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      labelQ[i].classList.add('modal__label-focus--1');
+    });
   });
 
-  input.addEventListener('blur', () => {
-    if (input.value != 0) {
-      label.classList.add('modal__label-focus');
-    } else {
-      label.classList.remove('modal__label-focus');
-    }
+  inputQ.forEach((item, i) => {
+    item.addEventListener('blur', () => {
+      if (item.value != 0) {
+        labelQ[i].classList.add('modal__label-focus--1');
+      } else {
+        labelQ[i].classList.remove('modal__label-focus--1');
+      }
+    });
   });
 
-  inputSecond.addEventListener('focus', () => {
-    labelSecond.classList.add('modal__label-focus--2');
+  // Смена темы 
+
+  const btnBlack = document.querySelectorAll('[data-black]'),
+        btnWhite = document.querySelectorAll('[data-white]'),
+        body = document.querySelector('body'),
+        titles = document.querySelectorAll('[data-title]'),
+        subTitles = document.querySelectorAll('[data-subtitle]'),
+        p = document.querySelectorAll('[data-p]'),
+        textFromDesign = document.querySelectorAll('[data-design]'),
+        reviewsCard = document.querySelectorAll('[data-bg]'),
+        blockForBtns = document.querySelectorAll('[data-border]'),
+        links = document.querySelectorAll('[data-link]');
+
+  btnBlack.forEach(item => {
+    item.addEventListener('click', () => {
+      blockForBtns.forEach(item => item.classList.add('block-btn'));
+      btnBlack.forEach(item => item.classList.add('btn-black'));
+      btnWhite.forEach(item => item.classList.add('btn-white'));
+      body.classList.add('body-color');
+      titles.forEach(item => item.classList.add('title-color'));
+      subTitles.forEach(item => item.classList.add('text-color'));
+      p.forEach(item => item.classList.add('text-color'));
+      links.forEach(item => item.classList.add('text-color'));
+      textFromDesign.forEach(item => item.classList.add('text-color--2'));
+      reviewsCard.forEach(item => item.classList.add('background-white'));
+    });
   });
 
-  inputSecond.addEventListener('blur', () => {
-    if (inputSecond.value != 0) {
-      labelSecond.classList.add('modal__label-focus--2');
-    } else {
-      labelSecond.classList.remove('modal__label-focus--2');
-    }
+  btnWhite.forEach(item => {
+    item.addEventListener('click', () => {
+      blockForBtns.forEach(item => item.classList.remove('block-btn'));
+      btnBlack.forEach(item => item.classList.remove('btn-black'));
+      btnWhite.forEach(item => item.classList.remove('btn-white'));
+      body.classList.remove('body-color');
+      titles.forEach(item => item.classList.remove('title-color'));
+      subTitles.forEach(item => item.classList.remove('text-color'));
+      p.forEach(item => item.classList.remove('text-color'));
+      links.forEach(item => item.classList.remove('text-color'));
+      textFromDesign.forEach(item => item.classList.remove('text-color--2'));
+      reviewsCard.forEach(item => item.classList.remove('background-white'));
+    });
   });
 });
