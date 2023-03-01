@@ -178,7 +178,6 @@
 
   .description__subtitle::after {
     width: 100%;
-    background-color: $grey;
   }
 
   .description__inner:nth-child(2) .description__subtitle::after {
@@ -188,23 +187,6 @@
 
   .description__img {
     display: none;
-  }
-
-  .description__subtitle,
-  .description__p {
-    color: $grey;
-  }
-
-  .description__inner:hover .description__subtitle {
-    color: $white-background;
-  }
-
-  .description__inner:hover .description__p {
-    color: rgba($white-background, 0.7);
-  }
-
-  .description__inner:hover .description__subtitle::after {
-    background-color: $orange;
   }
 
   .description__images {

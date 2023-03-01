@@ -101,15 +101,19 @@ window.addEventListener('DOMContentLoaded', () => {
   // Смена темы 
 
   const btnBlack = document.querySelectorAll('[data-black]'),
-        btnWhite = document.querySelectorAll('[data-white]'),
-        body = document.querySelector('body'),
-        titles = document.querySelectorAll('[data-title]'),
-        subTitles = document.querySelectorAll('[data-subtitle]'),
-        p = document.querySelectorAll('[data-p]'),
-        textFromDesign = document.querySelectorAll('[data-design]'),
-        reviewsCard = document.querySelectorAll('[data-bg]'),
-        blockForBtns = document.querySelectorAll('[data-border]'),
-        links = document.querySelectorAll('[data-link]');
+    btnWhite = document.querySelectorAll('[data-white]'),
+    body = document.querySelector('body'),
+    header = document.querySelector('[data-header]'),
+    imgMob = document.querySelector('[data-img-mob]'),
+    imgTab = document.querySelector('[data-img-tab]'),
+    imgDesk = document.querySelector('[data-img-desk]'),
+    titles = document.querySelectorAll('[data-title]'),
+    subTitles = document.querySelectorAll('[data-subtitle]'),
+    p = document.querySelectorAll('[data-p]'),
+    textFromDesign = document.querySelectorAll('[data-design]'),
+    reviewsCard = document.querySelectorAll('[data-bg]'),
+    blockForBtns = document.querySelectorAll('[data-border]'),
+    links = document.querySelectorAll('[data-link]');
 
   btnBlack.forEach(item => {
     item.addEventListener('click', () => {
@@ -117,6 +121,10 @@ window.addEventListener('DOMContentLoaded', () => {
       btnBlack.forEach(item => item.classList.add('btn-black'));
       btnWhite.forEach(item => item.classList.add('btn-white'));
       body.classList.add('body-color');
+      header.classList.add('header-bike');
+      imgMob.src = 'img/bike-mobile-black2.png';
+      imgTab.src = 'img/bike-tab-black2.png';
+      imgDesk.src = 'img/bike-desktop-black2.png';
       titles.forEach(item => item.classList.add('title-color'));
       subTitles.forEach(item => item.classList.add('text-color'));
       p.forEach(item => item.classList.add('text-color'));
@@ -132,6 +140,10 @@ window.addEventListener('DOMContentLoaded', () => {
       btnBlack.forEach(item => item.classList.remove('btn-black'));
       btnWhite.forEach(item => item.classList.remove('btn-white'));
       body.classList.remove('body-color');
+      header.classList.remove('header-bike');
+      imgMob.src = 'img/card-bike-mob.png';
+      imgTab.src = 'img/card-bike-tab.png';
+      imgDesk.src = 'img/card-bike-desk.png';
       titles.forEach(item => item.classList.remove('title-color'));
       subTitles.forEach(item => item.classList.remove('text-color'));
       p.forEach(item => item.classList.remove('text-color'));

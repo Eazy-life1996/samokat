@@ -39,3 +39,15 @@
   color: $black-second;
   border-radius: 65px;
 }
+
+.header-bike {
+  background-image: url(../img/bike-mobile-black.png);
+  
+  @media (min-width:$tablet-width) {
+    background-image: url(../img/bike-tab-black.png);
+  }
+
+  @media (min-width:$desktop-width) {
+    background-image: url(../img/bike-desktop-black.png);
+  }
+}
