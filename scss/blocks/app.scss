@@ -28,6 +28,8 @@
 
 .app__phone {
   margin: auto;
+  z-index: 5;
+  position: relative;
 }
 
 .app__phone-desktop {
@@ -43,7 +45,7 @@
   position: absolute;
   top: 40%;
   right: 0;
-  z-index: -5;
+  z-index: 3;
   height: 300px;
   width: 100%;
 }
@@ -106,12 +108,12 @@
     right: 0;
     top: -60%;
     height: 600px;
-    z-index: -5;
+    z-index: 3;
   }
 
   .app__phone {
     position: relative;
-    z-index: -8;
+    z-index: 5;
   }
 
   .app__circle--mob,
@@ -158,7 +160,7 @@
   .app__phone-desktop {
     display: block;
     position: relative;
-    z-index: -8;
+    z-index: 4;
   }
 
   .app__phone {
@@ -175,7 +177,7 @@
     position: absolute;
     right: 0;
     top: -256px;
-    z-index: -5;
+    z-index: 5;
   }
 
   .app__circle--mob,
